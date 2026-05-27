@@ -3,3 +3,5 @@ node_modules/
 .superpowers/
 node_modules/
 .superpowers/
+.playwright-mcp/
+dashboard/overview-page.png
