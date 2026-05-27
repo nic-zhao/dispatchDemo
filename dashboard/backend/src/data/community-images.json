@@ -1,0 +1,54 @@
+[
+  {
+    "name": "pytorch/pytorch",
+    "tags": ["2.4.0-cuda12.4-cudnn9-runtime", "latest"],
+    "description": "PyTorch 深度学习框架",
+    "recommendedResources": { "vgpuNumber": 1, "vgpuMemory": 4096, "vgpuCores": 50, "cpu": "4", "memory": "8Gi" },
+    "command": ["python"],
+    "category": "framework"
+  },
+  {
+    "name": "tensorflow/serving",
+    "tags": ["latest-gpu"],
+    "description": "TensorFlow 模型推理服务",
+    "recommendedResources": { "vgpuNumber": 1, "vgpuMemory": 4096, "vgpuCores": 50, "cpu": "4", "memory": "8Gi" },
+    "command": ["tensorflow_model_server"],
+    "args": ["--port=9000"],
+    "category": "serving"
+  },
+  {
+    "name": "ollama/ollama",
+    "tags": ["latest"],
+    "description": "Ollama 本地大模型运行时",
+    "recommendedResources": { "vgpuNumber": 1, "vgpuMemory": 4096, "vgpuCores": 60, "cpu": "4", "memory": "8Gi" },
+    "command": ["ollama", "serve"],
+    "category": "runtime"
+  },
+  {
+    "name": "mistral/vllm",
+    "tags": ["latest"],
+    "description": "Mistral 官方 vLLM 推理镜像",
+    "recommendedResources": { "vgpuNumber": 1, "vgpuMemory": 4096, "vgpuCores": 80, "cpu": "4", "memory": "8Gi" },
+    "command": ["python3", "-m", "vllm.entrypoints.openai.api_server"],
+    "args": ["--model", "mistralai/Mistral-7B-Instruct-v0.3", "--port", "8000"],
+    "category": "serving"
+  },
+  {
+    "name": "huggingface/text-generation-inference",
+    "tags": ["latest"],
+    "description": "HuggingFace TGI 推理服务",
+    "recommendedResources": { "vgpuNumber": 1, "vgpuMemory": 4096, "vgpuCores": 80, "cpu": "4", "memory": "8Gi" },
+    "command": ["text-generation-launcher"],
+    "args": ["--model-id", "bigscience/bloom-560m", "--port", "8080"],
+    "category": "serving"
+  },
+  {
+    "name": "nginx",
+    "tags": ["latest"],
+    "description": "Nginx Web 服务器",
+    "recommendedResources": { "vgpuNumber": 0, "vgpuMemory": 0, "vgpuCores": 0, "cpu": "1", "memory": "512Mi" },
+    "command": ["nginx", "-g", "daemon off;"],
+    "ports": [80],
+    "category": "utility"
+  }
+]
