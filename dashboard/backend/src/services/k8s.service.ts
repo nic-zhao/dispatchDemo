@@ -32,13 +32,13 @@ export async function getNodeResources(): Promise<ResourceOverview> {
   // Get all deployments across namespaces
   const depList: any = await k8sAppsApi.listDeploymentForAllNamespaces();
   const deployments = depList.items.filter(
-    (d) => !d.metadata!.namespace!.startsWith('kube-') &&
+    (d: any) => !d.metadata!.namespace!.startsWith('kube-') &&
            !d.metadata!.namespace!.startsWith('volcano-') &&
            d.metadata!.namespace !== 'kubeflow'
   );
 
   const runningCount = deployments.filter(
-    (d) => d.status!.readyReplicas === d.status!.replicas
+    (d: any) => d.status!.readyReplicas === d.status!.replicas
   ).length;
 
   // Calculate vGPU allocated
@@ -74,12 +74,12 @@ export async function getNodeResources(): Promise<ResourceOverview> {
 export async function getRunningDeployments() {
   const depList: any = await k8sAppsApi.listDeploymentForAllNamespaces();
   const deployments = depList.items.filter(
-    (d) => !d.metadata!.namespace!.startsWith('kube-') &&
+    (d: any) => !d.metadata!.namespace!.startsWith('kube-') &&
            !d.metadata!.namespace!.startsWith('volcano-') &&
            d.metadata!.namespace !== 'kubeflow'
   );
 
-  return deployments.map((d) => ({
+  return deployments.map((d: any) => ({
     name: d.metadata!.name!,
     namespace: d.metadata!.namespace!,
     image: d.spec!.template.spec!.containers[0]?.image || '',
@@ -154,10 +154,36 @@ export async function createDeployment(params: CreateDeploymentParams) {
   };
 
   const result: any = await k8sAppsApi.createNamespacedDeployment({ namespace, body: deployment });
+
+  // Auto-create NodePort Service for each port
+  if (ports && ports.length > 0) {
+    const service: k8s.V1Service = {
+      apiVersion: 'v1',
+      kind: 'Service',
+      metadata: { name: `${name}-svc`, namespace, labels: { app: name } },
+      spec: {
+        type: 'NodePort',
+        selector: { app: name },
+        ports: ports.map((port) => ({ port, targetPort: port, protocol: 'TCP' })),
+      },
+    };
+    try {
+      await k8sCoreApi.createNamespacedService({ namespace, body: service });
+    } catch {
+      // Service may already exist, ignore
+    }
+  }
+
   return result;
 }
 
 export async function deleteDeployment(name: string, namespace: string) {
+  // Delete associated Service first
+  try {
+    await k8sCoreApi.deleteNamespacedService({ name: `${name}-svc`, namespace });
+  } catch {
+    // Service may not exist, ignore
+  }
   const result: any = await k8sAppsApi.deleteNamespacedDeployment({ name, namespace });
   return result;
 }
@@ -182,39 +208,37 @@ export async function getDeploymentDetail(name: string, namespace: string) {
     labelSelector: `app=${name}`,
   });
 
-  const services = (svcList.items || []).map((s: any) => ({
-    name: s.metadata!.name,
-    type: s.spec!.type,
-    clusterIP: s.spec!.clusterIP,
-    ports: (s.spec!.ports || []).map((p: any) => ({
-      port: p.port,
-      targetPort: p.targetPort,
-      nodePort: p.nodePort,
-    })),
-  }));
+  const endpoints = (svcList.items || []).map((s: any) => {
+    const nodePort = s.spec?.type === 'NodePort' ? s.spec.ports?.[0]?.nodePort : null;
+    const port = s.spec?.ports?.[0]?.port || 0;
+    return {
+      name: s.metadata!.name,
+      type: s.spec?.type || '',
+      port,
+      nodePort,
+      url: nodePort ? `http://<node-ip>:${nodePort}` : null,
+    };
+  });
 
   return {
-    deployment: {
-      name: dep.metadata!.name,
-      namespace: dep.metadata!.namespace,
-      image: dep.spec!.template.spec!.containers[0]?.image || '',
-      replicas: dep.spec!.replicas || 0,
-      readyReplicas: dep.status!.readyReplicas || 0,
-      createdAt: dep.metadata!.creationTimestamp || '',
-      labels: dep.metadata!.labels || {},
-    },
+    name: dep.metadata!.name,
+    namespace: dep.metadata!.namespace,
+    image: dep.spec!.template.spec!.containers[0]?.image || '',
+    replicas: dep.spec!.replicas || 0,
+    readyReplicas: dep.status!.readyReplicas || 0,
+    createdAt: dep.metadata!.creationTimestamp || '',
+    vgpu: parseInt(
+      dep.spec!.template.spec!.containers[0]?.resources?.limits?.['volcano.sh/vgpu-number'] || '0'
+    ),
+    vgpuMemory: parseInt(
+      dep.spec!.template.spec!.containers[0]?.resources?.limits?.['volcano.sh/vgpu-memory'] || '0'
+    ),
     pods: (podList.items || []).map((p: any) => ({
       name: p.metadata!.name,
       status: p.status!.phase,
-      nodeName: p.spec!.nodeName,
-      startTime: p.status!.startTime,
-      containers: (p.status!.containerStatuses || []).map((c: any) => ({
-        name: c.name,
-        ready: c.ready,
-        restartCount: c.restartCount,
-        image: c.image,
-      })),
+      restarts: p.status!.containerStatuses?.[0]?.restartCount || 0,
+      ip: p.status!.podIP || '',
     })),
-    services,
+    endpoints,
   };
 }

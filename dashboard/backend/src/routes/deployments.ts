@@ -34,7 +34,7 @@ router.post('/', async (req: Request, res: Response) => {
 router.get('/:name', async (req: Request, res: Response) => {
   try {
     const namespace = (req.query.namespace as string) || 'default';
-    const detail = await getDeploymentDetail(req.params.name, namespace);
+    const detail = await getDeploymentDetail(req.params.name as string, namespace);
     res.json(detail);
   } catch (err: any) {
     res.status(500).json({ error: err.message });
@@ -49,7 +49,7 @@ router.put('/:name', async (req: Request, res: Response) => {
       res.status(400).json({ error: 'namespace and replicas are required' });
       return;
     }
-    const result = await scaleDeployment(req.params.name, namespace, replicas);
+    const result = await scaleDeployment(req.params.name as string, namespace, replicas);
     res.json(result);
   } catch (err: any) {
     res.status(500).json({ error: err.message });
@@ -60,7 +60,7 @@ router.put('/:name', async (req: Request, res: Response) => {
 router.delete('/:name', async (req: Request, res: Response) => {
   try {
     const namespace = (req.query.namespace as string) || 'default';
-    const result = await deleteDeployment(req.params.name, namespace);
+    const result = await deleteDeployment(req.params.name as string, namespace);
     res.json(result);
   } catch (err: any) {
     res.status(500).json({ error: err.message });
