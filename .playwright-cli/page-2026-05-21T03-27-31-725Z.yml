@@ -1,0 +1,200 @@
+- generic [ref=e8]:
+  - link "Skip to main content" [ref=e9] [cursor=pointer]:
+    - /url: "#pageContent"
+    - generic [ref=e10]: Skip to main content
+  - generic [ref=e11]:
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - link "Grafana" [ref=e14] [cursor=pointer]:
+          - /url: /
+          - img "Grafana" [ref=e15]
+        - generic [ref=e16]: Grafana
+      - button "Undock menu" [ref=e17] [cursor=pointer]:
+        - img [ref=e18]
+      - button "Close menu" [ref=e20] [cursor=pointer]:
+        - img [ref=e21]
+    - navigation [ref=e23]:
+      - list "Navigation" [ref=e27]:
+        - listitem [ref=e28]:
+          - link "Home" [ref=e32] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e34]:
+              - img [ref=e35]
+              - paragraph [ref=e37]: Home
+        - listitem [ref=e38]:
+          - generic [ref=e39]:
+            - link "Bookmarks" [ref=e42] [cursor=pointer]:
+              - /url: /bookmarks
+              - generic [ref=e44]:
+                - img [ref=e45]
+                - paragraph [ref=e47]: Bookmarks
+            - 'button "Expand section: Bookmarks" [ref=e49] [cursor=pointer]':
+              - img [ref=e50]
+        - listitem [ref=e52]:
+          - generic [ref=e53]:
+            - link "Starred" [ref=e56] [cursor=pointer]:
+              - /url: /dashboards?starred
+              - generic [ref=e58]:
+                - img [ref=e59]
+                - paragraph [ref=e61]: Starred
+            - 'button "Expand section: Starred" [ref=e63] [cursor=pointer]':
+              - img [ref=e64]
+        - listitem [ref=e66]:
+          - generic [ref=e67]:
+            - link "Dashboards" [ref=e70] [cursor=pointer]:
+              - /url: /dashboards
+              - generic [ref=e72]:
+                - img [ref=e73]
+                - paragraph [ref=e75]: Dashboards
+            - 'button "Expand section: Dashboards" [ref=e77] [cursor=pointer]':
+              - img [ref=e78]
+        - listitem [ref=e80]:
+          - link "Explore" [ref=e84] [cursor=pointer]:
+            - /url: /explore
+            - generic [ref=e86]:
+              - img [ref=e87]
+              - paragraph [ref=e89]: Explore
+        - listitem [ref=e90]:
+          - generic [ref=e91]:
+            - link "Drilldown" [ref=e94] [cursor=pointer]:
+              - /url: /drilldown
+              - generic [ref=e96]:
+                - img [ref=e97]
+                - paragraph [ref=e102]: Drilldown
+            - 'button "Expand section: Drilldown" [ref=e104] [cursor=pointer]':
+              - img [ref=e105]
+        - listitem [ref=e107]:
+          - generic [ref=e108]:
+            - link "Alerting" [ref=e111] [cursor=pointer]:
+              - /url: /alerting
+              - generic [ref=e113]:
+                - img [ref=e114]
+                - paragraph [ref=e116]: Alerting
+            - 'button "Expand section: Alerting" [ref=e118] [cursor=pointer]':
+              - img [ref=e119]
+        - listitem [ref=e121]:
+          - generic [ref=e122]:
+            - link "Connections" [ref=e125] [cursor=pointer]:
+              - /url: /connections
+              - generic [ref=e127]:
+                - img [ref=e128]
+                - paragraph [ref=e130]: Connections
+            - 'button "Expand section: Connections" [ref=e132] [cursor=pointer]':
+              - img [ref=e133]
+        - listitem [ref=e135]:
+          - generic [ref=e136]:
+            - link "Administration" [ref=e139] [cursor=pointer]:
+              - /url: /admin
+              - generic [ref=e141]:
+                - img [ref=e142]
+                - paragraph [ref=e144]: Administration
+            - 'button "Expand section: Administration" [ref=e146] [cursor=pointer]':
+              - img [ref=e147]
+  - banner [ref=e149]:
+    - generic [ref=e150]:
+      - generic [ref=e151]:
+        - navigation "Breadcrumbs" [ref=e152]:
+          - list [ref=e153]:
+            - listitem [ref=e154]:
+              - link "Dashboards" [ref=e155] [cursor=pointer]:
+                - /url: /dashboards
+              - img [ref=e157]
+            - listitem [ref=e159]:
+              - generic "NVIDIA DCGM Exporter Dashboard" [ref=e160]
+        - button "Mark \"NVIDIA DCGM Exporter Dashboard\" as favorite" [ref=e161] [cursor=pointer]:
+          - img [ref=e162]
+      - generic [ref=e164]:
+        - generic [ref=e166]:
+          - img [ref=e168]
+          - button "Search..." [ref=e170] [cursor=pointer]
+          - generic [ref=e172]: ctrl+k
+        - button "New" [ref=e173] [cursor=pointer]:
+          - img [ref=e174]
+          - img [ref=e176]
+        - button "Help" [ref=e179] [cursor=pointer]:
+          - img [ref=e180]
+        - button "Profile" [ref=e183] [cursor=pointer]:
+          - img "User avatar" [ref=e184]
+  - main [ref=e187]:
+    - log [ref=e188]
+    - generic [ref=e191]:
+      - generic [ref=e193]:
+        - generic [ref=e194]:
+          - generic [ref=e195]:
+            - generic [ref=e196]:
+              - button "Move 7m 30s backward" [ref=e197] [cursor=pointer]:
+                - img [ref=e198]
+              - 'button "Time range selected: Last 15 minutes" [ref=e200] [cursor=pointer]':
+                - img [ref=e201]
+                - generic [ref=e205]: Last 15 minutes
+                - img [ref=e206]
+              - button "Move time range forwards" [ref=e208] [cursor=pointer]:
+                - img [ref=e209]
+              - button "Zoom out time range" [ref=e211] [cursor=pointer]:
+                - img [ref=e212]
+            - generic [ref=e214]:
+              - button "Refresh" [ref=e215] [cursor=pointer]:
+                - img [ref=e216]
+                - generic [ref=e218]: Refresh
+              - button "Auto refresh turned off. Choose refresh time interval" [ref=e219] [cursor=pointer]:
+                - img [ref=e220]
+          - generic [ref=e222]:
+            - generic [ref=e223]:
+              - button "Copy link" [ref=e224] [cursor=pointer]:
+                - img [ref=e225]
+                - generic [ref=e227]: Share
+              - button "Share" [ref=e228] [cursor=pointer]:
+                - img [ref=e229]
+            - button "Enter edit mode" [ref=e231] [cursor=pointer]:
+              - img [ref=e232]
+              - generic [ref=e234]: Edit
+        - generic [ref=e235]:
+          - generic [ref=e236]:
+            - img [ref=e237]
+            - text: instance
+          - generic [ref=e239] [cursor=pointer]:
+            - log [ref=e241]: Use Up and Down to choose options, press Enter to select the currently focused option, press Escape to exit the menu.
+            - generic [ref=e242]:
+              - generic [ref=e243]:
+                - button "Remove" [ref=e245]:
+                  - img [ref=e246]
+                - combobox "instance" [expanded] [active] [ref=e249]
+              - generic [ref=e250]:
+                - button "Clear value" [ref=e251]
+                - img [ref=e352]
+        - generic [ref=e255]:
+          - generic [ref=e256]:
+            - img [ref=e257]
+            - text: gpu
+          - generic [ref=e259] [cursor=pointer]:
+            - log [ref=e261]
+            - generic [ref=e262]:
+              - generic [ref=e263]:
+                - button "Remove" [ref=e265]:
+                  - img [ref=e266]
+                - combobox "gpu" [ref=e269]
+              - generic [ref=e270]:
+                - button "Clear value" [ref=e271]
+                - img [ref=e273]
+      - generic [ref=e275]:
+        - generic [ref=e280]:
+          - region "GPU Temperature" [ref=e286]:
+            - heading "GPU Temperature" [level=2] [ref=e289]
+            - generic [ref=e292]: No data
+          - region "GPU Avg. Temp" [ref=e298]:
+            - heading "GPU Avg. Temp" [level=2] [ref=e301]
+            - generic [ref=e304]: No data
+          - region "GPU Power Usage" [ref=e310]:
+            - heading "GPU Power Usage" [level=2] [ref=e313]
+            - generic [ref=e319]: No data
+          - region "GPU Power Total" [ref=e325]:
+            - heading "GPU Power Total" [level=2] [ref=e328]
+            - generic [ref=e331]: No data
+        - generic [ref=e338]:
+          - generic [ref=e339]:
+            - button "Export" [ref=e340] [cursor=pointer]:
+              - img [ref=e342]
+            - button "Outline" [ref=e344] [cursor=pointer]:
+              - img [ref=e346]
+          - button "Dock" [ref=e348] [cursor=pointer]:
+            - img [ref=e350]

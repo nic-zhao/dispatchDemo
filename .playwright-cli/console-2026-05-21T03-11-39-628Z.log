@@ -1,0 +1,5 @@
+[   41996ms] [ERROR] SceneVariableSet updateAndValidate error {message: Datasource ${DS_PROMETHEUS} was not found} @ http://127.0.0.1:32000/public/build/9210.170205b488a36bb02b1e.js:22
+[   41997ms] [ERROR] SceneVariableSet updateAndValidate error {message: Datasource ${DS_PROMETHEUS} was not found} @ http://127.0.0.1:32000/public/build/9210.170205b488a36bb02b1e.js:22
+[   61653ms] [ERROR] Misconfigured AnnotationsDataLayer: Data source is required for annotations. Resolving default data source i {type: prometheus, uid: prometheus} @ http://127.0.0.1:32000/public/build/7457.eb3dee18ffc9c77585e8.js:247
+[  107407ms] [ERROR] Misconfigured AnnotationsDataLayer: Data source is required for annotations. Resolving default data source i {type: prometheus, uid: prometheus} @ http://127.0.0.1:32000/public/build/7457.eb3dee18ffc9c77585e8.js:247
+[  243590ms] [ERROR] Misconfigured AnnotationsDataLayer: Data source is required for annotations. Resolving default data source i {type: prometheus, uid: prometheus} @ http://127.0.0.1:32000/public/build/7457.eb3dee18ffc9c77585e8.js:247

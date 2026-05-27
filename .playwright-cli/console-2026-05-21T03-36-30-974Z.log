@@ -1,0 +1,5 @@
+[   66562ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:32000/apis/dashboard.grafana.app/v2/namespaces/default/dashboards/dcgm-test-import-123/dto:0
+[   69637ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:32000/apis/dashboard.grafana.app/v2/namespaces/default/dashboards/dcgm-test-import-123/dto:0
+[   69728ms] [LOG] not correct url correcting /d/dcgm-test-import-123/nvidia-dcgm-test-import /d/dcgm-test-import-123 @ http://127.0.0.1:32000/public/build/7457.eb3dee18ffc9c77585e8.js:236
+[   69787ms] [ERROR] SceneVariableSet updateAndValidate error {message: Datasource ${DS_PROMETHEUS} was not found} @ http://127.0.0.1:32000/public/build/9210.170205b488a36bb02b1e.js:22
+[   69788ms] [ERROR] SceneVariableSet updateAndValidate error {message: Datasource ${DS_PROMETHEUS} was not found} @ http://127.0.0.1:32000/public/build/9210.170205b488a36bb02b1e.js:22

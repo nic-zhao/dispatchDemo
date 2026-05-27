@@ -1,0 +1,33 @@
+- generic [ref=e1]:
+  - alert [ref=e2]
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - tablist [ref=e7]:
+        - tab "手机登录/注册" [ref=e8] [cursor=pointer]
+        - tab "密码登录" [active] [selected] [ref=e9] [cursor=pointer]
+      - tabpanel "密码登录" [ref=e34]:
+        - generic [ref=e35]:
+          - generic [ref=e36]:
+            - text: 手机号
+            - textbox "手机号" [ref=e37]:
+              - /placeholder: 请输入手机号
+          - generic [ref=e38]:
+            - text: 密码
+            - textbox "密码" [ref=e39]:
+              - /placeholder: 请输入密码
+          - generic [ref=e40]:
+            - checkbox "我已阅读并同意《隐私协议》和《服务协议》" [ref=e41] [cursor=pointer]
+            - checkbox
+            - generic [ref=e43] [cursor=pointer]:
+              - text: 我已阅读并同意
+              - link "《隐私协议》" [ref=e44]:
+                - /url: https://terms.gongjiyun.com/UserPrivacy/89f0aa0c530baf340946527f4b078c79.html
+              - text: 和
+              - link "《服务协议》" [ref=e45]:
+                - /url: https://terms.gongjiyun.com/GongjiSuanLiServiceAgreement/b4f2e738b2204e4280d961764c374299.html
+          - button "登录" [ref=e46] [cursor=pointer]
+    - generic [ref=e32]: 或
+    - button "微信登录" [ref=e33] [cursor=pointer]:
+      - img
+      - text: 微信登录
+  - region "Notifications alt+T"

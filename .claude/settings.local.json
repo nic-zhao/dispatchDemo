@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "Bash(npx playwright *)",
+      "Bash(lsb_release -a)",
+      "Bash(PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 npm install @playwright/test)",
+      "Bash(npm ls *)",
+      "Bash(mkdir -p /home/nic/.cache/ms-playwright)",
+      "Bash(PLAYWRIGHT_BROWSERS_PATH=/home/nic/.cache/ms-playwright npx playwright install chromium)",
+      "Bash(PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=1 npx playwright install chromium)"
+    ]
+  }
+}

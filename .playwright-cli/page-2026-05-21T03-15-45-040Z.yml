@@ -1,0 +1,386 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - link [ref=e1188] [cursor=pointer]:
+      - /url: "#pageContent"
+      - generic [ref=e15]: Skip to main content
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - link [ref=e1189] [cursor=pointer]:
+            - /url: /
+            - img [ref=e1190]
+          - generic [ref=e21]: Grafana
+        - button [ref=e1191] [cursor=pointer]:
+          - img [ref=e23]
+        - button [ref=e1192] [cursor=pointer]:
+          - img [ref=e26]
+      - navigation [ref=e28]:
+        - list [ref=e1193]:
+          - listitem [ref=e33]:
+            - link [ref=e1194] [cursor=pointer]:
+              - /url: /
+              - generic [ref=e39]:
+                - img [ref=e40]
+                - paragraph [ref=e42]: Home
+          - listitem [ref=e43]:
+            - generic [ref=e44]:
+              - link [ref=e1195] [cursor=pointer]:
+                - /url: /bookmarks
+                - generic [ref=e49]:
+                  - img [ref=e50]
+                  - paragraph [ref=e52]: Bookmarks
+              - button [ref=e1196] [cursor=pointer]:
+                - img [ref=e55]
+          - listitem [ref=e57]:
+            - generic [ref=e58]:
+              - link [ref=e1197] [cursor=pointer]:
+                - /url: /dashboards?starred
+                - generic [ref=e63]:
+                  - img [ref=e64]
+                  - paragraph [ref=e66]: Starred
+              - button [ref=e1198] [cursor=pointer]:
+                - img [ref=e69]
+          - listitem [ref=e71]:
+            - generic [ref=e72]:
+              - link [ref=e1199] [cursor=pointer]:
+                - /url: /dashboards
+                - generic [ref=e77]:
+                  - img [ref=e78]
+                  - paragraph [ref=e80]: Dashboards
+              - button [ref=e1200] [cursor=pointer]:
+                - img [ref=e83]
+          - listitem [ref=e85]:
+            - link [ref=e1201] [cursor=pointer]:
+              - /url: /explore
+              - generic [ref=e91]:
+                - img [ref=e92]
+                - paragraph [ref=e94]: Explore
+          - listitem [ref=e95]:
+            - generic [ref=e96]:
+              - link [ref=e1202] [cursor=pointer]:
+                - /url: /drilldown
+                - generic [ref=e101]:
+                  - img [ref=e102]
+                  - paragraph [ref=e107]: Drilldown
+              - button [ref=e1203] [cursor=pointer]:
+                - img [ref=e110]
+          - listitem [ref=e112]:
+            - generic [ref=e113]:
+              - link [ref=e1204] [cursor=pointer]:
+                - /url: /alerting
+                - generic [ref=e118]:
+                  - img [ref=e119]
+                  - paragraph [ref=e121]: Alerting
+              - button [ref=e1205] [cursor=pointer]:
+                - img [ref=e124]
+          - listitem [ref=e126]:
+            - generic [ref=e127]:
+              - link [ref=e1206] [cursor=pointer]:
+                - /url: /connections
+                - generic [ref=e132]:
+                  - img [ref=e133]
+                  - paragraph [ref=e135]: Connections
+              - button [ref=e1207] [cursor=pointer]:
+                - img [ref=e138]
+          - listitem [ref=e140]:
+            - generic [ref=e141]:
+              - link [ref=e1208] [cursor=pointer]:
+                - /url: /admin
+                - generic [ref=e146]:
+                  - img [ref=e147]
+                  - paragraph [ref=e149]: Administration
+              - button [ref=e1209] [cursor=pointer]:
+                - img [ref=e152]
+    - banner [ref=e154]:
+      - generic [ref=e155]:
+        - generic [ref=e156]:
+          - navigation [ref=e1210]:
+            - list [ref=e158]:
+              - listitem [ref=e159]:
+                - link [ref=e1211] [cursor=pointer]:
+                  - /url: /dashboards
+                  - text: Dashboards
+                - img [ref=e827]
+              - listitem [ref=e829]:
+                - generic [ref=e1212]: NVIDIA DCGM Exporter Dashboard
+          - button [ref=e1213] [cursor=pointer]:
+            - img [ref=e832]
+        - generic [ref=e161]:
+          - generic [ref=e163]:
+            - img [ref=e165]
+            - button [ref=e1214] [cursor=pointer]: Search...
+            - generic [ref=e169]: ctrl+k
+          - button [ref=e1215] [cursor=pointer]:
+            - img [ref=e171]
+            - img [ref=e173]
+          - button [ref=e1216] [cursor=pointer]:
+            - img [ref=e177]
+          - button [ref=e1217] [cursor=pointer]:
+            - img [ref=e1218]
+    - main [ref=e7]:
+      - log [ref=e8]
+      - generic [ref=e835]:
+        - generic [ref=e837]:
+          - generic [ref=e838]:
+            - generic [ref=e839]:
+              - generic [ref=e840]:
+                - button [ref=e1219] [cursor=pointer]:
+                  - img [ref=e842]
+                - 'button "Time range selected: Last 15 minutes" [ref=e844] [cursor=pointer]':
+                  - img [ref=e845]
+                  - generic [ref=e849]: Last 15 minutes
+                  - img [ref=e850]
+                - button [ref=e1220] [cursor=pointer]:
+                  - img [ref=e853]
+                - button [ref=e1221] [cursor=pointer]:
+                  - img [ref=e856]
+              - generic [ref=e858]:
+                - button [ref=e1222] [cursor=pointer]:
+                  - img [ref=e1062]
+                  - generic [ref=e1064]: Refresh
+                - button [ref=e1223] [cursor=pointer]:
+                  - img [ref=e864]
+            - generic [ref=e866]:
+              - generic [ref=e867]:
+                - button [ref=e1224] [cursor=pointer]:
+                  - img [ref=e869]
+                  - generic [ref=e871]: Share
+                - button [ref=e1225] [cursor=pointer]:
+                  - img [ref=e873]
+              - generic [ref=e996]:
+                - button [ref=e1226] [cursor=pointer]:
+                  - generic [ref=e998]: Save
+                - button [ref=e1227] [cursor=pointer]:
+                  - img [ref=e1000]
+              - button [ref=e1228] [cursor=pointer]:
+                - img [ref=e1003]
+                - generic [ref=e878]: Exit edit
+          - generic [ref=e879]:
+            - generic [ref=e880] [cursor=pointer]:
+              - img [ref=e881]
+              - text: instance
+            - generic [ref=e883] [cursor=pointer]:
+              - log [ref=e885]
+              - generic [ref=e886]:
+                - generic [ref=e887]:
+                  - button [ref=e1229]:
+                    - img [ref=e890]
+                  - combobox [ref=e1230]
+                - generic [ref=e894]:
+                  - button [ref=e1421]
+                  - img [ref=e897]
+          - generic [ref=e899]:
+            - generic [ref=e900] [cursor=pointer]:
+              - img [ref=e901]
+              - text: gpu
+            - generic [ref=e903] [cursor=pointer]:
+              - log [ref=e905]
+              - generic [ref=e906]:
+                - generic [ref=e907]:
+                  - button [ref=e1232]:
+                    - img [ref=e910]
+                  - combobox [ref=e1233]
+                - generic [ref=e914]:
+                  - button [ref=e1234]
+                  - img [ref=e917]
+          - button [ref=e1235] [cursor=pointer]:
+            - img [ref=e1008]
+        - generic [ref=e919]:
+          - generic [ref=e921]:
+            - generic [ref=e924]:
+              - generic [ref=e925]:
+                - region [ref=e1236]:
+                  - heading [level=2] [ref=e1237]: GPU Temperature
+                  - generic [ref=e939]: No data
+                - img [ref=e1011]
+              - generic [ref=e940]:
+                - region [ref=e1238]:
+                  - heading [level=2] [ref=e1239]: GPU Avg. Temp
+                  - generic [ref=e951]: No data
+                - img [ref=e1014]
+              - generic [ref=e952]:
+                - region [ref=e1240]:
+                  - heading [level=2] [ref=e1241]: GPU Power Usage
+                  - generic [ref=e963]: No data
+                - img [ref=e1017]
+              - generic [ref=e964]:
+                - region [ref=e1242]:
+                  - heading [level=2] [ref=e1243]: GPU Power Total
+                  - generic [ref=e975]: No data
+                - img [ref=e1020]
+            - generic [ref=e1023]:
+              - button [ref=e1244] [cursor=pointer]:
+                - img [ref=e1025]
+                - generic [ref=e1027]: Add panel
+              - button [ref=e1245] [cursor=pointer]:
+                - img [ref=e1029]
+                - generic [ref=e1031]: Group panels
+          - generic [ref=e980]:
+            - generic [ref=e1068]:
+              - generic [ref=e1069]:
+                - button [ref=e1246] [cursor=pointer]:
+                  - img [ref=e1071]
+                - generic [ref=e1073]: Query variable
+                - generic [ref=e1074]:
+                  - button [ref=e1247] [cursor=pointer]:
+                    - generic [ref=e1077]: Change
+                  - button [ref=e1078] [cursor=pointer]:
+                    - img [ref=e1079]
+                    - img [ref=e1082]
+                  - button [ref=e1248] [cursor=pointer]:
+                    - img [ref=e1085]
+              - generic [ref=e1090]:
+                - generic [ref=e1091]:
+                  - generic [ref=e1092]:
+                    - generic [ref=e1095]: Name
+                    - textbox [ref=e1249]: instance
+                  - generic [ref=e1250]:
+                    - generic [ref=e1104]:
+                      - generic [ref=e1105]: Label
+                      - generic [ref=e1106]: Optional display name
+                    - textbox [ref=e1111]
+                  - generic [ref=e1251]:
+                    - generic [ref=e1116]: Description
+                    - textbox [ref=e1252]:
+                      - /placeholder: Descriptive text
+                  - generic [ref=e1120]:
+                    - generic [ref=e1123]: Display
+                    - generic [ref=e1128]:
+                      - combobox [ref=e1129] [cursor=pointer]: Above dashboard
+                      - generic:
+                        - img
+                - generic [ref=e1130]:
+                  - generic [ref=e1131] [cursor=pointer]:
+                    - heading [level=6] [ref=e1253]: Query options
+                    - button [expanded] [ref=e1254]:
+                      - img [ref=e1134]
+                  - button [ref=e1257] [cursor=pointer]:
+                    - generic [ref=e1142]: Open variable editor
+                - generic [ref=e1143]:
+                  - generic [ref=e1144] [cursor=pointer]:
+                    - heading [level=6] [ref=e1258]: Selection options
+                    - button [expanded] [ref=e1259]:
+                      - img [ref=e1147]
+                  - generic [ref=e1260]:
+                    - generic [ref=e1261]:
+                      - generic [ref=e1154]: Multi-value
+                      - generic [ref=e1157]:
+                        - switch [checked] [ref=e1262]
+                        - img [ref=e1160] [cursor=pointer]
+                    - generic [ref=e1263]:
+                      - generic [ref=e1165]:
+                        - generic [ref=e1166]: Include All value
+                        - generic [ref=e1167]: Enables a single option that represent all values
+                      - generic [ref=e1170]:
+                        - switch [ref=e1264]
+                        - img [ref=e1173] [cursor=pointer]
+                    - generic [ref=e1265]:
+                      - generic [ref=e1178]:
+                        - generic [ref=e1179]: Allow custom values
+                        - generic [ref=e1180]: Enables users to enter values
+                      - generic [ref=e1183]:
+                        - switch [checked] [ref=e1266]
+                        - img [ref=e1186] [cursor=pointer]
+            - generic [ref=e982]:
+              - generic [ref=e1032]:
+                - button [ref=e1267] [cursor=pointer]:
+                  - img [ref=e1035]
+                - button [ref=e1268] [cursor=pointer]:
+                  - img [ref=e1039]
+                - button [ref=e1269] [cursor=pointer]:
+                  - img [ref=e1043]
+                - button [ref=e1270] [cursor=pointer]:
+                  - img [ref=e1047]
+              - generic [ref=e983]:
+                - button [ref=e1271] [cursor=pointer]:
+                  - img [ref=e986]
+                - button [ref=e1272] [cursor=pointer]:
+                  - img [ref=e990]
+              - button [ref=e1273] [cursor=pointer]:
+                - img [ref=e994]
+  - dialog "Query Variable" [ref=e1275]:
+    - generic [ref=e1276]:
+      - heading "Query Variable" [level=2] [ref=e1277]
+      - button "Close" [ref=e1279] [cursor=pointer]:
+        - img [ref=e1280]
+    - generic [ref=e1282]:
+      - generic [ref=e1283]:
+        - generic [ref=e1284]:
+          - generic [ref=e1287]: Target data source
+          - generic [ref=e1293] [cursor=pointer]:
+            - img "Prometheus logo" [ref=e1424]
+            - textbox "Select a data source" [active] [ref=e1294]:
+              - /placeholder: prometheus-1
+            - img [ref=e1425]
+        - generic [ref=e1430]:
+          - generic [ref=e1431]:
+            - text: Query type
+            - img [ref=e1432]
+          - generic [ref=e1435] [cursor=pointer]:
+            - log [ref=e1437]
+            - generic [ref=e1438]:
+              - generic [ref=e1439]:
+                - generic [ref=e1440]: Select query type
+                - combobox "Query type" [ref=e1442]
+              - img [ref=e1444]
+        - generic [ref=e1299]:
+          - generic [ref=e1300]:
+            - generic [ref=e1302]:
+              - generic [ref=e1303]: Regex
+              - generic [ref=e1305]:
+                - text: Optional, if you want to extract part of a series name or metric node segment.
+                - text: Named capture groups can be used to separate the display text and value (
+                - link "see examples" [ref=e1306] [cursor=pointer]:
+                  - /url: https://grafana.com/docs/grafana/latest/variables/filter-variables-with-regex#filter-and-modify-using-named-text-and-value-capture-groups
+                  - text: see examples
+                  - img [ref=e1307]
+                - text: ).
+            - textbox "Regex Optional, if you want to extract part of a series name or metric node segment. Named capture groups can be used to separate the display text and value (see examples )." [ref=e1311]:
+              - /placeholder: /.*-(?<text>.*)-(?<value>.*)-.*/
+          - group "Apply regex to Choose whether to apply the regex pattern to the variable value or display text" [ref=e1312]:
+            - generic [ref=e1313]:
+              - generic [ref=e1314]: Apply regex to
+              - generic [ref=e1315]: Choose whether to apply the regex pattern to the variable value or display text
+            - radiogroup [ref=e1318]:
+              - generic [ref=e1319]:
+                - radio "Variable value" [checked] [ref=e1320] [cursor=pointer]
+                - generic [ref=e1321] [cursor=pointer]: Variable value
+              - generic [ref=e1322]:
+                - radio "Display text" [ref=e1323] [cursor=pointer]
+                - generic [ref=e1324] [cursor=pointer]: Display text
+        - generic [ref=e1325]:
+          - generic [ref=e1327]:
+            - generic [ref=e1328]: Sort
+            - generic [ref=e1329]: How to sort the values of this variable
+          - generic [ref=e1332] [cursor=pointer]:
+            - log [ref=e1334]
+            - generic [ref=e1335]:
+              - generic [ref=e1336]:
+                - generic [ref=e1446]: Disabled
+                - combobox "Sort How to sort the values of this variable" [ref=e1339]
+              - img [ref=e1341]
+        - group "Refresh When to update the values of this variable" [ref=e1343]:
+          - generic [ref=e1344]:
+            - generic [ref=e1345]: Refresh
+            - generic [ref=e1346]: When to update the values of this variable
+          - radiogroup [ref=e1349]:
+            - generic [ref=e1350]:
+              - radio "On dashboard load" [checked] [ref=e1351] [cursor=pointer]
+              - generic [ref=e1352] [cursor=pointer]: On dashboard load
+            - generic [ref=e1353]:
+              - radio "On time range change" [ref=e1354] [cursor=pointer]
+              - generic [ref=e1355] [cursor=pointer]: On time range change
+        - generic [ref=e1356]: Static options
+        - generic [ref=e1358]:
+          - generic [ref=e1360]:
+            - generic [ref=e1361]: Use static options
+            - generic [ref=e1362]: Add custom options in addition to query results
+          - generic [ref=e1366]:
+            - switch [ref=e1367]
+            - img [ref=e1369] [cursor=pointer]
+        - generic [ref=e1372]: Preview of values (0)
+      - generic [ref=e1374]:
+        - button "Preview" [ref=e1375] [cursor=pointer]:
+          - generic [ref=e1376]: Preview
+        - button "Close" [ref=e1377] [cursor=pointer]:
+          - generic [ref=e1378]: Close

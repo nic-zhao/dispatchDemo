@@ -1,0 +1,15 @@
+[     784ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "username"): (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:32000/login:0
+[   40360ms] [WARNING] Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
+Arguments: 
+[0] _isAMomentObject: true, _isUTC: false, _useUTC: false, _l: undefined, _i: Tue, 12 May 2026 16:46:59, _f: undefined, _strict: undefined, _locale: [object Object]
+Error
+    at a.createFromInputFallback (http://127.0.0.1:32000/public/build/6029.ced17922ce65e4fd1ef9.js:624:3)
+    at an (http://127.0.0.1:32000/public/build/6029.ced17922ce65e4fd1ef9.js:624:25639)
+    at un (http://127.0.0.1:32000/public/build/6029.ced17922ce65e4fd1ef9.js:624:29347)
+    at aa (http://127.0.0.1:32000/public/build/6029.ced17922ce65e4fd1ef9.js:624:29213)
+    at on (http://127.0.0.1:32000/public/build/6029.ced17922ce65e4fd1ef9.js:624:28930)
+    at sa (http://127.0.0.1:32000/public/build/6029.ced17922ce65e4fd1ef9.js:624:29707)
+    at A (http://127.0.0.1:32000/public/build/6029.ced17922ce65e4fd1ef9.js:624:29740)
+    at a (http://127.0.0.1:32000/public/build/6029.ced17922ce65e4fd1ef9.js:621:89)
+    at n (http://127.0.0.1:32000/public/build/6182.0d50a9cb388deb736875.js:1:2394)
+    at u (http://127.0.0.1:32000/public/build/7457.eb3dee18ffc9c77585e8.js:368:384342) @ http://127.0.0.1:32000/public/build/6029.ced17922ce65e4fd1ef9.js:620

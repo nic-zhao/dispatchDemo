@@ -1,0 +1,2 @@
+[       4ms] [ERROR] Misconfigured AnnotationsDataLayer: Data source is required for annotations. Resolving default data source i {type: prometheus, uid: prometheus} @ http://127.0.0.1:32000/public/build/7457.eb3dee18ffc9c77585e8.js:247
+[       5ms] [ERROR] Misconfigured AnnotationsDataLayer: Data source is required for annotations. Resolving default data source i {type: prometheus, uid: prometheus} @ http://127.0.0.1:32000/public/build/7457.eb3dee18ffc9c77585e8.js:247
