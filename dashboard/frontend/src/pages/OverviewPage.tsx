@@ -66,6 +66,7 @@ export function OverviewPage() {
               <thead>
                 <tr className="border-b text-left text-muted-foreground">
                   <th className="pb-2">名称</th>
+                  <th className="pb-2">命名空间</th>
                   <th className="pb-2">镜像</th>
                   <th className="pb-2">状态</th>
                   <th className="pb-2">GPU</th>
@@ -74,11 +75,12 @@ export function OverviewPage() {
               <tbody>
                 {deployments.map((d: any) => (
                   <tr
-                    key={d.name}
+                    key={`${d.namespace}-${d.name}`}
                     className="border-b last:border-0 cursor-pointer hover:bg-muted/50"
                     onClick={() => navigate(`/deployments/${d.name}?namespace=${d.namespace}`)}
                   >
                     <td className="py-2 font-medium">{d.name}</td>
+                    <td className="py-2 text-muted-foreground">{d.namespace}</td>
                     <td className="py-2 text-muted-foreground">{d.image}</td>
                     <td className="py-2">
                       <StatusBadge ready={d.readyReplicas} replicas={d.replicas} />
