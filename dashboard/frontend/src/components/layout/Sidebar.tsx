@@ -1,9 +1,10 @@
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, Rocket, Package, Server } from 'lucide-react';
+import { LayoutDashboard, Rocket, Package, Server, Boxes } from 'lucide-react';
 
 const navItems = [
   { to: '/', label: '概览', icon: LayoutDashboard },
   { to: '/deployments', label: '弹性部署', icon: Rocket },
+  { to: '/pods', label: '任务列表', icon: Boxes },
   { to: '/images', label: '镜像仓库', icon: Package },
   { to: '/resources', label: '集群资源', icon: Server },
 ];

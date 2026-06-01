@@ -1,0 +1,35 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true,
+      "headers": {
+        "CONTEXT7_API_KEY": "ctx7sk-2f5f48cc-83ff-41b5-99bc-c4ff9d140311"
+      }
+    }
+  },
+  "permission": {
+    "read": {
+     "*": "allow"	    
+    },	    
+    "bash": {
+      "*": "allow",
+      "git *": "allow",
+      "npm *": "allow",
+      "cat *": "allow",
+      "rm *": "deny",
+      "grep *": "allow",
+      "conda *": "allow",
+      "glob *": "allow"
+    },
+    "edit": {
+      "/": "allow",
+      "/home/karl": "allow",
+      "/home/nic": "allow",
+      "/tmp": "allow"
+    }
+  },
+  "plugin": ["superpowers@git+https://github.com/obra/superpowers.git"]
+}

@@ -1,0 +1,149 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - heading "算力平台" [level=1] [ref=e6]
+      - paragraph [ref=e7]: AI Dashboard Demo
+    - navigation [ref=e8]:
+      - link "概览" [ref=e9] [cursor=pointer]:
+        - /url: /
+        - img [ref=e10]
+        - text: 概览
+      - link "弹性部署" [ref=e15] [cursor=pointer]:
+        - /url: /deployments
+        - img [ref=e16]
+        - text: 弹性部署
+      - link "任务列表" [ref=e21] [cursor=pointer]:
+        - /url: /pods
+        - img [ref=e22]
+        - text: 任务列表
+      - link "镜像仓库" [ref=e32] [cursor=pointer]:
+        - /url: /images
+        - img [ref=e33]
+        - text: 镜像仓库
+      - link "集群资源" [ref=e37] [cursor=pointer]:
+        - /url: /resources
+        - img [ref=e38]
+        - text: 集群资源
+  - main [ref=e41]:
+    - generic [ref=e247]:
+      - generic [ref=e248]:
+        - button [ref=e249]:
+          - img
+        - heading "jupyter-root" [level=2] [ref=e250]
+        - generic [ref=e251]: Running
+      - generic [ref=e252]:
+        - generic [ref=e254]: 基本信息
+        - generic [ref=e255]:
+          - generic [ref=e256]:
+            - generic [ref=e257]:
+              - text: 命名空间
+              - paragraph [ref=e258]: jhub
+            - generic [ref=e259]:
+              - text: IP
+              - paragraph [ref=e260]: 10.42.0.157
+            - generic [ref=e261]:
+              - text: 节点
+              - paragraph [ref=e262]: karl-zzb
+            - generic [ref=e263]:
+              - text: 创建时间
+              - paragraph [ref=e264]: 2026/6/1 19:41:53
+            - generic [ref=e265]:
+              - text: 重启次数
+              - paragraph [ref=e266]: "0"
+            - generic [ref=e267]:
+              - text: 管理者
+              - paragraph [ref=e268]: "-"
+          - generic [ref=e269]:
+            - text: 容器
+            - generic [ref=e271]: notebookai-class-notebook:v2
+      - generic [ref=e272]:
+        - generic [ref=e274]: 快捷访问
+        - generic [ref=e275]:
+          - generic [ref=e276]:
+            - generic [ref=e277]: "应用界面:"
+            - link "JupyterHub" [ref=e278] [cursor=pointer]:
+              - /url: http://100.93.76.54:32080/
+              - text: JupyterHub
+              - img [ref=e279]
+          - generic [ref=e283]:
+            - generic [ref=e284]: "SSH 终端:"
+            - button "打开终端" [ref=e285]:
+              - img
+              - text: 打开终端
+      - generic [ref=e286]:
+        - generic [ref=e288]: 状态条件
+        - table [ref=e290]:
+          - rowgroup [ref=e291]:
+            - row "类型 状态 原因 消息" [ref=e292]:
+              - columnheader "类型" [ref=e293]
+              - columnheader "状态" [ref=e294]
+              - columnheader "原因" [ref=e295]
+              - columnheader "消息" [ref=e296]
+          - rowgroup [ref=e297]:
+            - row "PodReadyToStartContainers True" [ref=e298]:
+              - cell "PodReadyToStartContainers" [ref=e299]
+              - cell "True" [ref=e300]
+              - cell [ref=e301]
+              - cell [ref=e302]
+            - row "Initialized True" [ref=e303]:
+              - cell "Initialized" [ref=e304]
+              - cell "True" [ref=e305]
+              - cell [ref=e306]
+              - cell [ref=e307]
+            - row "Ready True" [ref=e308]:
+              - cell "Ready" [ref=e309]
+              - cell "True" [ref=e310]
+              - cell [ref=e311]
+              - cell [ref=e312]
+            - row "ContainersReady True" [ref=e313]:
+              - cell "ContainersReady" [ref=e314]
+              - cell "True" [ref=e315]
+              - cell [ref=e316]
+              - cell [ref=e317]
+            - row "PodScheduled True" [ref=e318]:
+              - cell "PodScheduled" [ref=e319]
+              - cell "True" [ref=e320]
+              - cell [ref=e321]
+              - cell [ref=e322]
+      - generic [ref=e323]:
+        - generic [ref=e325]: 实时日志
+        - generic [ref=e327]:
+          - generic [ref=e328]:
+            - generic [ref=e329]: 已连接
+            - generic [ref=e330]:
+              - button "清空" [ref=e331]
+              - button "断开" [ref=e332]
+          - generic [ref=e333]:
+            - generic [ref=e334]: "Entered start.sh with args: jupyterhub-singleuser Running hooks in: /usr/local/bin/start-notebook.d as uid: 1000 gid: 100 Done running hooks in: /usr/local/bin/start-notebook.d"
+            - generic [ref=e335]: "Running hooks in: /usr/local/bin/before-notebook.d as uid: 1000 gid: 100 Sourcing shell script: /usr/local/bin/before-notebook.d/10activate-conda-env.sh Done running hooks in: /usr/local/bin/before-notebook.d Executing the command: jupyterhub-singleuser"
+            - generic [ref=e336]: "[W 2026-06-01 11:42:00.524 ServerApp] A `_jupyter_server_extension_points` function was not found in nbclassic. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server. [I 2026-06-01 11:42:00.630 ServerApp] Extension package nbgrader.server_extensions.assignment_list took 0.1054s to import"
+            - generic [ref=e337]: "[I 2026-06-01 11:42:00.681 ServerApp] jupyter_lsp | extension was successfully linked. [I 2026-06-01 11:42:00.683 ServerApp] jupyter_server_terminals | extension was successfully linked. [I 2026-06-01 11:42:00.683 JupyterHubSingleUser] Starting jupyterhub single-user server extension version 5.4.6 [I 2026-06-01 11:42:00.683 JupyterHubSingleUser] Using default url from server extension lab: /lab"
+            - generic [ref=e338]: "[I 2026-06-01 11:42:00.684 ServerApp] jupyterhub | extension was successfully linked. [W 2026-06-01 11:42:00.684 LabApp] 'extra_template_paths' was found in both NotebookApp and ServerApp. This is likely a recent change. This config will only be set in NotebookApp. Please check if you should also config these traits in ServerApp for your purpose. [I 2026-06-01 11:42:00.685 ServerApp] jupyterlab | extension was successfully linked."
+            - generic [ref=e339]: "[I 2026-06-01 11:42:00.685 ServerApp] jupyterlab_git | extension was successfully linked. [W 2026-06-01 11:42:00.686 NotebookApp] 'extra_template_paths' was found in both NotebookApp and ServerApp. This is likely a recent change. This config will only be set in NotebookApp. Please check if you should also config these traits in ServerApp for your purpose. [I 2026-06-01 11:42:00.687 ServerApp] nbclassic | extension was successfully linked. [I 2026-06-01 11:42:00.687 ServerApp] nbdime | extension was successfully linked. [I 2026-06-01 11:42:00.687 ServerApp] nbgrader.server_extensions.assignment_list | extension was successfully linked. [I 2026-06-01 11:42:00.687 ServerApp] nbgrader.server_extensions.course_list | extension was successfully linked. [I 2026-06-01 11:42:00.687 ServerApp] nbgrader.server_extensions.formgrader | extension was successfully linked. [I 2026-06-01 11:42:00.687 ServerApp] nbgrader.server_extensions.validate_assignment | extension was successfully linked. [W 2026-06-01 11:42:00.687 JupyterNotebookApp] 'extra_template_paths' was found in both NotebookApp and ServerApp. This is likely a recent change. This config will only be set in NotebookApp. Please check if you should also config these traits in ServerApp for your purpose."
+            - generic [ref=e340]: "[I 2026-06-01 11:42:00.688 ServerApp] notebook | extension was successfully linked. [I 2026-06-01 11:42:00.688 ServerApp] Writing Jupyter server cookie secret to /home/jovyan/.local/share/jupyter/runtime/jupyter_cookie_secret [I 2026-06-01 11:42:00.774 ServerApp] notebook_shim | extension was successfully linked. [I 2026-06-01 11:42:00.783 ServerApp] notebook_shim | extension was successfully loaded. [I 2026-06-01 11:42:00.784 ServerApp] jupyter_lsp | extension was successfully loaded. [I 2026-06-01 11:42:00.784 ServerApp] jupyter_server_terminals | extension was successfully loaded. [I 2026-06-01 11:42:00.787 JupyterHubSingleUser] Updating Hub with activity every 300 seconds [I 2026-06-01 11:42:00.787 ServerApp] jupyterhub | extension was successfully loaded. [I 2026-06-01 11:42:00.791 LabApp] JupyterLab extension loaded from /opt/conda/lib/python3.13/site-packages/jupyterlab [I 2026-06-01 11:42:00.791 LabApp] JupyterLab application directory is /opt/conda/share/jupyter/lab"
+            - generic [ref=e341]: "[I 2026-06-01 11:42:00.791 LabApp] Extension Manager is 'pypi'. [I 2026-06-01 11:42:00.803 ServerApp] Skipped non-installed server(s): basedpyright, bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyrefly, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server [I 2026-06-01 11:42:00.818 ServerApp] jupyterlab | extension was successfully loaded. [I 2026-06-01 11:42:00.820 ServerApp] jupyterlab_git | extension was successfully loaded. [I 2026-06-01 11:42:00.827 ServerApp] nbclassic | extension was successfully loaded. [I 2026-06-01 11:42:00.862 ServerApp] nbdime | extension was successfully loaded."
+            - generic [ref=e342]: "[I 2026-06-01 11:42:00.862 ServerApp] Loading the assignment_list nbgrader serverextension [I 2026-06-01 11:42:00.862 ServerApp] nbgrader.server_extensions.assignment_list | extension was successfully loaded. [I 2026-06-01 11:42:00.862 ServerApp] Loading the course_list nbgrader serverextension [I 2026-06-01 11:42:00.862 ServerApp] nbgrader.server_extensions.course_list | extension was successfully loaded. [I 2026-06-01 11:42:00.862 ServerApp] Loading the formgrader nbgrader serverextension [W 2026-06-01 11:42:00.864 ServerApp] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking) [NbGrader | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking) [I 2026-06-01 11:42:00.868 ServerApp] nbgrader.server_extensions.formgrader | extension was successfully loaded. [I 2026-06-01 11:42:00.868 ServerApp] Loading the validate_assignment nbgrader serverextension [I 2026-06-01 11:42:00.869 ServerApp] nbgrader.server_extensions.validate_assignment | extension was successfully loaded."
+            - generic [ref=e343]: "[I 2026-06-01 11:42:00.870 ServerApp] notebook | extension was successfully loaded. [I 2026-06-01 11:42:00.870 ServerApp] Serving notebooks from local directory: /home/jovyan [I 2026-06-01 11:42:00.870 ServerApp] Jupyter Server 2.18.2 is running at: [I 2026-06-01 11:42:00.870 ServerApp] http://jupyter-root:8888/user/root/lab?token=... [I 2026-06-01 11:42:00.870 ServerApp] http://127.0.0.1:8888/user/root/lab?token=..."
+            - generic [ref=e344]: "[I 2026-06-01 11:42:00.870 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation). [I 2026-06-01 11:42:03.326 ServerApp] 200 GET /user/root/api (@10.42.0.152) 0.52ms [I 2026-06-01 11:51:12.953 ServerApp] 302 GET /user/root/ -> /user/root/lab? (@::ffff:10.42.0.1) 0.27ms [I 2026-06-01 11:51:12.955 ServerApp] 302 GET /user/root/lab -> /hub/api/oauth2/authorize?client_id=jupyterhub-user-root&redirect_uri=%2Fuser%2Froot%2Foauth_callback&response_type=code&state=[secret] (@::ffff:10.42.0.1) 0.64ms"
+            - generic [ref=e345]: "[I 2026-06-01 11:51:13.015 ServerApp] Logged-in user root [I 2026-06-01 11:51:13.016 ServerApp] Setting new xsrf cookie for b'7eb16e13d4a54bfcac9da0144a03c445:252d56df88c6bdc8c142a5bcfaf02e66ebaede3bcde2c6b196c2e3630902ced9' {'path': '/user/root/'}"
+            - generic [ref=e346]: "[I 2026-06-01 11:51:13.016 ServerApp] 302 GET /user/root/oauth_callback?code=[secret]&state=[secret] -> /user/root/lab (root@::ffff:10.42.0.1) 44.52ms [I 2026-06-01 11:51:13.021 ServerApp] 200 GET /user/root/lab (root@::ffff:10.42.0.1) 3.43ms [I 2026-06-01 11:51:13.287 ServerApp] 200 GET /user/root/api/me?1780314673271 (root@::ffff:10.42.0.1) 0.96ms [W 2026-06-01 11:51:13.288 ServerApp] Skipping XSRF check for insecure request GET /user/root/api/events/subscribe [I 2026-06-01 11:51:13.288 ServerApp] 101 GET /user/root/api/events/subscribe (root@::ffff:10.42.0.1) 1.97ms [I 2026-06-01 11:51:13.315 ServerApp] 200 GET /user/root/lab/api/settings?1780314673277 (root@::ffff:10.42.0.1) 27.77ms [I 2026-06-01 11:51:13.315 ServerApp] 200 GET /user/root/api/kernels?1780314673280 (root@::ffff:10.42.0.1) 27.99ms [I 2026-06-01 11:51:13.315 ServerApp] 200 GET /user/root/api/terminals?1780314673280 (root@::ffff:10.42.0.1) 28.02ms [I 2026-06-01 11:51:13.316 ServerApp] 200 GET /user/root/api/sessions?1780314673280 (root@::ffff:10.42.0.1) 28.25ms"
+            - generic [ref=e347]: "[I 2026-06-01 11:51:13.316 ServerApp] 200 GET /user/root/api/kernelspecs?1780314673269 (root@::ffff:10.42.0.1) 43.85ms [I 2026-06-01 11:51:13.318 ServerApp] 200 GET /user/root/lab/api/workspaces?1780314673281 (root@::ffff:10.42.0.1) 0.37ms [I 2026-06-01 11:51:13.318 ServerApp] 200 GET /user/root/api/me?1780314673289 (root@::ffff:10.42.0.1) 0.28ms [I 2026-06-01 11:51:13.319 ServerApp] 200 GET /user/root/api/kernelspecs?1780314673317 (root@::ffff:10.42.0.1) 0.75ms [I 2026-06-01 11:51:13.389 ServerApp] 200 GET /user/root/lab/api/translations/zh_CN?1780314673369 (root@::ffff:10.42.0.1) 18.60ms [I 2026-06-01 11:51:13.397 ServerApp] 200 GET /user/root/api/config/jupyterlabapputilsextensionannouncements?1780314673395 (root@::ffff:10.42.0.1) 1.45ms [I 2026-06-01 11:51:13.414 ServerApp] 200 GET /user/root/lsp/status?1780314673411 (root@::ffff:10.42.0.1) 2.39ms"
+            - generic [ref=e348]: "[I 2026-06-01 11:51:13.439 ServerApp] 200 GET /user/root/lab/api/settings/@jupyterlab/codemirror-extension:plugin?1780314673436 (root@::ffff:10.42.0.1) 2.06ms [I 2026-06-01 11:51:13.444 ServerApp] 200 GET /user/root/lab/api/translations?1780314673429 (root@::ffff:10.42.0.1) 13.04ms [W 2026-06-01 11:51:13.546 LabApp] Could not determine jupyterlab build status without nodejs [I 2026-06-01 11:51:13.546 ServerApp] 200 GET /user/root/lab/api/build?1780314673544 (root@::ffff:10.42.0.1) 1.03ms"
+            - generic [ref=e349]: "[I 2026-06-01 11:51:13.580 ServerApp] 200 GET /user/root/api/contents?content=1&hash=0&1780314673573 (root@::ffff:10.42.0.1) 5.28ms [I 2026-06-01 11:51:13.581 ServerApp] 200 GET /user/root/git/settings?version=0.52.0&1780314673576 (root@::ffff:10.42.0.1) 2.69ms [I 2026-06-01 11:51:13.609 ServerApp] 200 GET /user/root/lab/api/settings/@jupyterlab/docmanager-extension:plugin?1780314673605 (root@::ffff:10.42.0.1) 1.91ms [I 2026-06-01 11:51:13.611 ServerApp] 200 GET /user/root/lab/api/settings/@jupyterlab/notebook-extension:panel?1780314673608 (root@::ffff:10.42.0.1) 1.84ms [I 2026-06-01 11:51:13.656 ServerApp] 200 GET /user/root/lab/api/workspaces/default?1780314673653 (root@::ffff:10.42.0.1) 0.67ms [I 2026-06-01 11:51:13.707 ServerApp] 200 GET /user/root/lab/api/settings?ids_only=true&1780314673701 (root@::ffff:10.42.0.1) 4.36ms [I 2026-06-01 11:51:14.691 ServerApp] 204 PUT /user/root/lab/api/workspaces/default?1780314674689 (root@::ffff:10.42.0.1) 0.87ms"
+            - generic [ref=e350]: "[I 2026-06-01 11:51:14.696 ServerApp] 200 GET /user/root/api/contents?content=1&hash=0&1780314674693 (root@::ffff:10.42.0.1) 1.81ms [I 2026-06-01 11:51:14.697 ServerApp] 200 POST /user/root/git/show_prefix?1780314674693 (root@::ffff:10.42.0.1) 3.44ms [I 2026-06-01 11:51:15.214 ServerApp] 204 PUT /user/root/lab/api/workspaces/default?1780314675211 (root@::ffff:10.42.0.1) 0.85ms [I 2026-06-01 11:51:23.206 ServerApp] Creating new notebook in [I 2026-06-01 11:51:23.257 ServerApp] Writing notebook-signing key to /home/jovyan/.local/share/jupyter/notebook_secret [I 2026-06-01 11:51:23.279 ServerApp] 201 POST /user/root/api/contents?1780314683204 (root@::ffff:10.42.0.1) 73.69ms"
+            - generic [ref=e351]: "[I 2026-06-01 11:51:23.283 ServerApp] 200 GET /user/root/api/contents/Untitled.ipynb?content=0&hash=0&1780314683281 (root@::ffff:10.42.0.1) 0.95ms [I 2026-06-01 11:51:23.286 ServerApp] 200 GET /user/root/api/contents?content=1&hash=0&1780314683281 (root@::ffff:10.42.0.1) 2.43ms [I 2026-06-01 11:51:23.304 ServerApp] 200 POST /user/root/nbdime/api/isgit?1780314683301 (root@::ffff:10.42.0.1) 0.87ms [I 2026-06-01 11:51:23.331 ServerApp] 200 GET /user/root/api/contents/Untitled.ipynb?type=notebook&content=1&hash=1&contentProviderId=undefined&1780314683304 (root@::ffff:10.42.0.1) 25.54ms [I 2026-06-01 11:51:23.334 ServerApp] 200 GET /user/root/api/kernels?1780314683328 (root@::ffff:10.42.0.1) 2.09ms [I 2026-06-01 11:51:23.335 ServerApp] 200 GET /user/root/api/terminals?1780314683328 (root@::ffff:10.42.0.1) 2.26ms"
+            - generic [ref=e352]: "[I 2026-06-01 11:51:23.336 ServerApp] 200 GET /user/root/api/sessions?1780314683328 (root@::ffff:10.42.0.1) 0.58ms [I 2026-06-01 11:51:23.340 ServerApp] 200 GET /user/root/api/contents/Untitled.ipynb/checkpoints?1780314683337 (root@::ffff:10.42.0.1) 1.87ms [I 2026-06-01 11:51:23.341 ServerApp] 200 GET /user/root/api/contents/Untitled.ipynb/checkpoints?1780314683337 (root@::ffff:10.42.0.1) 1.46ms [I 2026-06-01 11:51:23.344 ServerApp] 200 GET /user/root/api/contents/Untitled.ipynb/checkpoints?1780314683341 (root@::ffff:10.42.0.1) 1.28ms"
+            - generic [ref=e353]: "[I 2026-06-01 11:51:23.358 ServerApp] 200 GET /user/root/api/sessions?1780314683356 (root@::ffff:10.42.0.1) 0.46ms [I 2026-06-01 11:51:23.374 ServerApp] 200 GET /user/root/lab/api/workspaces?1780314683370 (root@::ffff:10.42.0.1) 0.81ms [I 2026-06-01 11:51:23.386 ServerApp] Kernel started: d7a631c6-a190-4763-a97d-1e5f8e00f71c [I 2026-06-01 11:51:23.386 ServerApp] 201 POST /user/root/api/sessions?1780314683360 (root@::ffff:10.42.0.1) 25.21ms [I 2026-06-01 11:51:23.390 ServerApp] 200 GET /user/root/api/sessions?1780314683387 (root@::ffff:10.42.0.1) 1.40ms [W 2026-06-01 11:51:23.393 ServerApp] Skipping XSRF check for insecure request GET /user/root/api/kernels/d7a631c6-a190-4763-a97d-1e5f8e00f71c/channels [I 2026-06-01 11:51:23.396 ServerApp] 200 PATCH /user/root/api/sessions/73a68fd6-2644-45ce-b685-55cb0e956e4d?1780314683392 (root@::ffff:10.42.0.1) 1.41ms [I 2026-06-01 11:51:23.397 ServerApp] 200 GET /user/root/api/kernels?1780314683393 (root@::ffff:10.42.0.1) 0.48ms"
+            - generic [ref=e354]: "[I 2026-06-01 11:51:23.400 ServerApp] 200 PATCH /user/root/api/sessions/73a68fd6-2644-45ce-b685-55cb0e956e4d?1780314683397 (root@::ffff:10.42.0.1) 1.20ms [I 2026-06-01 11:51:23.401 ServerApp] 200 GET /user/root/api/sessions?1780314683397 (root@::ffff:10.42.0.1) 0.59ms [I 2026-06-01 11:51:23.404 ServerApp] 200 GET /user/root/api/kernelspecs?1780314683401 (root@::ffff:10.42.0.1) 1.80ms [I 2026-06-01 11:51:23.544 ServerApp] 200 GET /user/root/api/nbconvert?1780314683308 (root@::ffff:10.42.0.1) 212.06ms [I 2026-06-01 11:51:23.734 ServerApp] Adapting from protocol version 5.3 (kernel d7a631c6-a190-4763-a97d-1e5f8e00f71c) to 5.4 (client). [I 2026-06-01 11:51:23.735 ServerApp] 101 GET /user/root/api/kernels/d7a631c6-a190-4763-a97d-1e5f8e00f71c/channels?session_id=529f72af-ec27-428e-afdf-0757a6161617 (root@::ffff:10.42.0.1) 341.81ms [I 2026-06-01 11:51:23.735 ServerApp] Connecting to kernel d7a631c6-a190-4763-a97d-1e5f8e00f71c."
+            - generic [ref=e355]: "[W 2026-06-01 11:51:23.735 ServerApp] The websocket_ping_timeout (90000) cannot be longer than the websocket_ping_interval (30000). Setting websocket_ping_timeout=30000 [W 2026-06-01 11:51:23.747 ServerApp] Skipping XSRF check for insecure request GET /user/root/api/kernels/d7a631c6-a190-4763-a97d-1e5f8e00f71c/channels"
+            - generic [ref=e356]: "[I 2026-06-01 11:51:23.748 ServerApp] Adapting from protocol version 5.3 (kernel d7a631c6-a190-4763-a97d-1e5f8e00f71c) to 5.4 (client). [I 2026-06-01 11:51:23.748 ServerApp] 101 GET /user/root/api/kernels/d7a631c6-a190-4763-a97d-1e5f8e00f71c/channels?session_id=b4fcf1f0-1d92-445b-bcdc-a0588c484e6c (root@::ffff:10.42.0.1) 1.18ms [I 2026-06-01 11:51:23.748 ServerApp] Connecting to kernel d7a631c6-a190-4763-a97d-1e5f8e00f71c. [W 2026-06-01 11:51:23.761 ServerApp] Skipping XSRF check for insecure request GET /user/root/api/kernels/d7a631c6-a190-4763-a97d-1e5f8e00f71c/channels [I 2026-06-01 11:51:23.762 ServerApp] Adapting from protocol version 5.3 (kernel d7a631c6-a190-4763-a97d-1e5f8e00f71c) to 5.4 (client). [I 2026-06-01 11:51:23.762 ServerApp] 101 GET /user/root/api/kernels/d7a631c6-a190-4763-a97d-1e5f8e00f71c/channels?session_id=5f21ebff-656d-4280-bfc8-f40ade30ad6d (root@::ffff:10.42.0.1) 1.48ms [I 2026-06-01 11:51:23.762 ServerApp] Connecting to kernel d7a631c6-a190-4763-a97d-1e5f8e00f71c. [I 2026-06-01 11:51:23.769 ServerApp] 200 GET /user/root/api/sessions?1780314683766 (root@::ffff:10.42.0.1) 0.76ms"
+            - generic [ref=e357]: "[I 2026-06-01 11:51:23.769 ServerApp] 200 GET /user/root/api/kernels?1780314683766 (root@::ffff:10.42.0.1) 0.86ms [I 2026-06-01 11:51:24.345 ServerApp] 204 PUT /user/root/lab/api/workspaces/default?1780314684342 (root@::ffff:10.42.0.1) 0.86ms [I 2026-06-01 12:05:38.800 ServerApp] 200 GET /user/root/lab/api/workspaces?1780315538786 (root@::ffff:10.42.0.1) 12.36ms"
+            - generic [ref=e358]: "[I 2026-06-01 12:05:38.802 ServerApp] 200 GET /user/root/api/kernels?1780315538787 (root@::ffff:10.42.0.1) 13.49ms [I 2026-06-01 12:05:38.803 ServerApp] 200 GET /user/root/api/me?1780315538787 (root@::ffff:10.42.0.1) 13.64ms [I 2026-06-01 12:05:38.803 ServerApp] 200 GET /user/root/api/kernelspecs?1780315538787 (root@::ffff:10.42.0.1) 1.72ms [I 2026-06-01 12:05:38.803 ServerApp] 200 GET /user/root/api/sessions?1780315538787 (root@::ffff:10.42.0.1) 14.77ms [I 2026-06-01 12:05:38.804 ServerApp] 200 GET /user/root/api/terminals?1780315538785 (root@::ffff:10.42.0.1) 16.60ms"
+            - generic [ref=e359]: "[I 2026-06-01 12:05:38.805 ServerApp] 200 GET /user/root/api/contents?content=1&hash=0&1780315538784 (root@::ffff:10.42.0.1) 18.25ms [I 2026-06-01 12:05:38.808 ServerApp] 200 GET /user/root/api/contents/Untitled.ipynb?content=0&hash=1&contentProviderId=undefined&1780315538788 (root@::ffff:10.42.0.1) 1.25ms"
+            - generic [ref=e360]: "[I 2026-06-01 12:05:38.812 ServerApp] Saving file at /Untitled.ipynb [I 2026-06-01 12:05:38.834 ServerApp] 200 PUT /user/root/api/contents/Untitled.ipynb?1780315538810 (root@::ffff:10.42.0.1) 22.44ms [I 2026-06-01 12:05:38.838 ServerApp] 200 GET /user/root/api/contents/Untitled.ipynb?content=0&hash=1&contentProviderId=undefined&1780315538835 (root@::ffff:10.42.0.1) 1.64ms"
+            - generic [ref=e361]: "[I 2026-06-01 12:05:38.839 ServerApp] 200 GET /user/root/api/contents?content=1&hash=0&1780315538835 (root@::ffff:10.42.0.1) 2.42ms [I 2026-06-01 12:05:38.840 ServerApp] 200 GET /user/root/api/contents/Untitled.ipynb/checkpoints?1780315538839 (root@::ffff:10.42.0.1) 0.74ms [I 2026-06-01 12:05:40.151 ServerApp] Starting buffering for d7a631c6-a190-4763-a97d-1e5f8e00f71c:b4fcf1f0-1d92-445b-bcdc-a0588c484e6c"
+      - generic [ref=e362]:
+        - generic [ref=e364]: 操作
+        - button "删除 Pod" [ref=e366]:
+          - img
+          - text: 删除 Pod

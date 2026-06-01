@@ -311,6 +311,85 @@ export async function getDeploymentDetail(name: string, namespace: string) {
   };
 }
 
+// ── Pods ────────────────────────────────────────────────────────────
+
+export async function getAllPods() {
+  const podList: any = await k8sCoreApi.listPodForAllNamespaces();
+  const pods = podList.items.filter(
+    (p: any) => !isSystemNamespace(p.metadata!.namespace!),
+  );
+
+  return pods.map((p: any) => {
+    const owner = resolveOwner(p);
+
+    return {
+      name: p.metadata!.name,
+      namespace: p.metadata!.namespace,
+      status: p.status!.phase,
+      restarts: p.status!.containerStatuses?.[0]?.restartCount || 0,
+      ip: p.status!.podIP || '',
+      image: p.spec!.containers[0]?.image || '',
+      node: p.spec!.nodeName || '',
+      createdAt: p.metadata!.creationTimestamp || '',
+      owner: owner
+        ? `${owner.kind}/${owner.name}`
+        : '-',
+    };
+  });
+}
+
+export async function getPodDetail(name: string, namespace: string) {
+  const p: any = await k8sCoreApi.readNamespacedPod({ name, namespace });
+  const owner = resolveOwner(p);
+
+  const containers = (p.spec!.containers || []).map((c: any) => ({
+    name: c.name,
+    image: c.image,
+  }));
+
+  const conditions = (p.status?.conditions || []).map((c: any) => ({
+    type: c.type,
+    status: c.status,
+    reason: c.reason || '',
+    message: c.message || '',
+  }));
+
+  return {
+    name: p.metadata!.name,
+    namespace: p.metadata!.namespace,
+    status: p.status!.phase,
+    restarts: p.status!.containerStatuses?.[0]?.restartCount || 0,
+    ip: p.status!.podIP || '',
+    node: p.spec!.nodeName || '',
+    createdAt: p.metadata!.creationTimestamp || '',
+    owner: owner
+      ? `${owner.kind}/${owner.name}`
+      : '-',
+    containers,
+    conditions,
+    labels: p.metadata!.labels || {},
+  };
+}
+
+export async function deletePod(name: string, namespace: string) {
+  const result: any = await k8sCoreApi.deleteNamespacedPod({ name, namespace });
+  return result;
+}
+
+function resolveOwner(pod: any): { kind: string; name: string } | null {
+  const refs = pod.metadata?.ownerReferences;
+  if (!refs || refs.length === 0) return null;
+
+  const direct = refs[0];
+  if (direct.kind === 'ReplicaSet') {
+    const rsName = direct.name;
+    const deploymentName = rsName.replace(/-[\w]+$/, '');
+    return { kind: 'Deployment', name: deploymentName };
+  }
+
+  return { kind: direct.kind, name: direct.name };
+}
+
 // ── Helpers for Kubeflow training jobs ──────────────────────────────
 
 function isSystemNamespace(ns: string): boolean {

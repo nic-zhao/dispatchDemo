@@ -6,15 +6,21 @@ import { DeploymentDetailPage } from './pages/DeploymentDetailPage';
 import { ImagesPage } from './pages/ImagesPage';
 import { ResourcesPage } from './pages/ResourcesPage';
 import { CreateDeploymentPage } from './pages/CreateDeploymentPage';
+import { PodsPage } from './pages/PodsPage';
+import { PodDetailPage } from './pages/PodDetailPage';
+import { TerminalPage } from './pages/TerminalPage';
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/pods/:name/terminal" element={<TerminalPage />} />
         <Route element={<AppLayout />}>
           <Route path="/" element={<OverviewPage />} />
           <Route path="/deployments" element={<DeploymentsPage />} />
           <Route path="/deployments/:name" element={<DeploymentDetailPage />} />
+          <Route path="/pods" element={<PodsPage />} />
+          <Route path="/pods/:name" element={<PodDetailPage />} />
           <Route path="/images" element={<ImagesPage />} />
           <Route path="/resources" element={<ResourcesPage />} />
           <Route path="/create" element={<CreateDeploymentPage />} />

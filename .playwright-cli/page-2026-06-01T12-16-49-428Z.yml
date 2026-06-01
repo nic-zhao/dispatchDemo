@@ -1,0 +1,45 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - heading "算力平台" [level=1] [ref=e6]
+      - paragraph [ref=e7]: AI Dashboard Demo
+    - navigation [ref=e8]:
+      - link "概览" [ref=e9] [cursor=pointer]:
+        - /url: /
+        - img [ref=e10]
+        - text: 概览
+      - link "弹性部署" [ref=e15] [cursor=pointer]:
+        - /url: /deployments
+        - img [ref=e16]
+        - text: 弹性部署
+      - link "任务列表" [ref=e21] [cursor=pointer]:
+        - /url: /pods
+        - img [ref=e22]
+        - text: 任务列表
+      - link "镜像仓库" [ref=e32] [cursor=pointer]:
+        - /url: /images
+        - img [ref=e33]
+        - text: 镜像仓库
+      - link "集群资源" [ref=e37] [cursor=pointer]:
+        - /url: /resources
+        - img [ref=e38]
+        - text: 集群资源
+  - main [ref=e41]:
+    - generic [ref=e43]:
+      - heading "任务列表" [level=2] [ref=e45]
+      - table [ref=e49]:
+        - rowgroup [ref=e50]:
+          - row "名称 命名空间 状态 重启 IP 镜像 节点 创建时间 管理者 操作" [ref=e51]:
+            - columnheader "名称" [ref=e52]
+            - columnheader "命名空间" [ref=e53]
+            - columnheader "状态" [ref=e54]
+            - columnheader "重启" [ref=e55]
+            - columnheader "IP" [ref=e56]
+            - columnheader "镜像" [ref=e57]
+            - columnheader "节点" [ref=e58]
+            - columnheader "创建时间" [ref=e59]
+            - columnheader "管理者" [ref=e60]
+            - columnheader "操作" [ref=e61]
+        - rowgroup [ref=e62]:
+          - row "暂无 Pod 数据" [ref=e63]:
+            - cell "暂无 Pod 数据" [ref=e64]

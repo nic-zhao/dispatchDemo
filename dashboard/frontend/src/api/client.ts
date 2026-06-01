@@ -22,4 +22,8 @@ export const api = {
   getImages: () => request<{ local: any[]; community: any[] }>('/images'),
   getResources: () => request<any>('/resources'),
   getLogStreamUrl: (name: string, ns?: string) => `${BASE}/deployments/${name}/logs${ns ? `?namespace=${ns}` : ''}`,
+  getPods: () => request<any[]>('/pods'),
+  getPodDetail: (name: string, ns?: string) => request<any>(`/pods/${name}${ns ? `?namespace=${ns}` : ''}`),
+  deletePod: (name: string, ns?: string) => request<any>(`/pods/${name}${ns ? `?namespace=${ns}` : ''}`, { method: 'DELETE' }),
+  getPodLogStreamUrl: (name: string, ns?: string) => `${BASE}/pods/${name}/logs${ns ? `?namespace=${ns}` : ''}`,
 };

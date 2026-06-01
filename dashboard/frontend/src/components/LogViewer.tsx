@@ -5,16 +5,19 @@ import { Button } from '@/components/ui/button';
 interface Props {
   name: string;
   namespace: string;
+  logType?: 'deployment' | 'pod';
 }
 
-export function LogViewer({ name, namespace }: Props) {
+export function LogViewer({ name, namespace, logType = 'deployment' }: Props) {
   const [logs, setLogs] = useState<string[]>([]);
   const [connected, setConnected] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const eventSourceRef = useRef<EventSource | null>(null);
 
   const connect = () => {
-    const url = api.getLogStreamUrl(name, namespace);
+    const url = logType === 'pod'
+      ? api.getPodLogStreamUrl(name, namespace)
+      : api.getLogStreamUrl(name, namespace);
     const es = new EventSource(url);
     eventSourceRef.current = es;
 

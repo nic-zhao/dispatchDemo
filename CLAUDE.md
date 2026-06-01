@@ -43,3 +43,17 @@ When working with browser automation:
 3. Get element refs with `playwright-cli snapshot`
 4. Interact using refs like `playwright-cli click e15` where `e15` is from the snapshot
 5. Close with `playwright-cli close`
+
+## Agent skills
+
+### Issue tracker
+
+Issues live in GitHub Issues, managed via `gh` CLI. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Default triage labels: needs-triage, needs-info, ready-for-agent, ready-for-human, wontfix. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context repo. See `docs/agents/domain.md`.
