@@ -30,7 +30,7 @@ export function ImagesPage() {
 
   const handleCreate = (img: ImageItem) => {
     const fullName = img.tag ? `${img.name}:${img.tag}` : img.name;
-    navigate(`/deployments?image=${encodeURIComponent(fullName)}`);
+    navigate(`/create?image=${encodeURIComponent(fullName)}`);
   };
 
   return (

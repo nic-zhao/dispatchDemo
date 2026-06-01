@@ -1,18 +1,14 @@
 import { useEffect, useState } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Plus, Trash2, Power, PowerOff } from 'lucide-react';
 import { api } from '@/api/client';
 import { StatusBadge } from '@/components/StatusBadge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { CreateDeploymentModal } from './CreateDeploymentModal';
 
 export function DeploymentsPage() {
   const [deployments, setDeployments] = useState<any[]>([]);
-  const [showCreate, setShowCreate] = useState(false);
-  const [prefillImage, setPrefillImage] = useState<string>('');
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
 
   const load = () => {
     api.getDeployments().then(setDeployments).catch(console.error);
@@ -20,11 +16,6 @@ export function DeploymentsPage() {
 
   useEffect(() => {
     load();
-    const img = searchParams.get('image');
-    if (img) {
-      setPrefillImage(img);
-      setShowCreate(true);
-    }
   }, []);
 
   const handleDelete = async (name: string, ns: string) => {
@@ -47,7 +38,7 @@ export function DeploymentsPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <h2 className="text-2xl font-semibold">弹性部署</h2>
-        <Button onClick={() => { setPrefillImage(''); setShowCreate(true); }}>
+        <Button onClick={() => navigate('/create')}>
           <Plus className="h-4 w-4 mr-1" /> 创建部署
         </Button>
       </div>
@@ -119,11 +110,6 @@ export function DeploymentsPage() {
         </CardContent>
       </Card>
 
-      <CreateDeploymentModal
-        open={showCreate}
-        onClose={() => { setShowCreate(false); load(); }}
-        prefillImage={prefillImage}
-      />
     </div>
   );
 }

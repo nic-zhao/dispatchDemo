@@ -5,6 +5,7 @@ import { DeploymentsPage } from './pages/DeploymentsPage';
 import { DeploymentDetailPage } from './pages/DeploymentDetailPage';
 import { ImagesPage } from './pages/ImagesPage';
 import { ResourcesPage } from './pages/ResourcesPage';
+import { CreateDeploymentPage } from './pages/CreateDeploymentPage';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
           <Route path="/deployments/:name" element={<DeploymentDetailPage />} />
           <Route path="/images" element={<ImagesPage />} />
           <Route path="/resources" element={<ResourcesPage />} />
+          <Route path="/create" element={<CreateDeploymentPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
