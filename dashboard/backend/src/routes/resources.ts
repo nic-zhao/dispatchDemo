@@ -5,8 +5,8 @@ const router = Router();
 
 router.get('/', async (_req, res) => {
   try {
-    const [node, queuesResult] = await Promise.all([
-      k8sCoreApi.readNode({ name: 'nic' }),
+    const [nodeList, queuesResult] = await Promise.all([
+      k8sCoreApi.listNode(),
       k8sCustomApi.listClusterCustomObject({
         group: 'scheduling.volcano.sh',
         version: 'v1beta1',
@@ -14,7 +14,11 @@ router.get('/', async (_req, res) => {
       }),
     ]);
 
-    const nodeData = node as any;
+    const nodeData = (nodeList as any).items?.[0] as any;
+    if (!nodeData) {
+      res.status(500).json({ error: 'No nodes found in the cluster' });
+      return;
+    }
     const queuesData = queuesResult as any;
 
     const nodeInfo = {

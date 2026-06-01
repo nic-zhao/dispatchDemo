@@ -58,6 +58,7 @@ export function DeploymentsPage() {
             <thead>
               <tr className="border-b text-left text-muted-foreground">
                 <th className="p-3">名称</th>
+                <th className="p-3">类型</th>
                 <th className="p-3">镜像</th>
                 <th className="p-3">命名空间</th>
                 <th className="p-3">状态</th>
@@ -78,6 +79,7 @@ export function DeploymentsPage() {
                   >
                     {d.name}
                   </td>
+                  <td className="p-3 text-muted-foreground">{d.kind || 'Deployment'}</td>
                   <td className="p-3 text-muted-foreground">{d.image}</td>
                   <td className="p-3 text-muted-foreground">{d.namespace}</td>
                   <td className="p-3">
@@ -107,7 +109,7 @@ export function DeploymentsPage() {
               ))}
               {deployments.length === 0 && (
                 <tr>
-                  <td colSpan={7} className="p-6 text-center text-muted-foreground">
+                  <td colSpan={8} className="p-6 text-center text-muted-foreground">
                     暂无部署，点击"创建部署"开始
                   </td>
                 </tr>

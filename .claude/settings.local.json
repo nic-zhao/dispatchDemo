@@ -9,7 +9,18 @@
       "Bash(npm ls *)",
       "Bash(mkdir -p /home/nic/.cache/ms-playwright)",
       "Bash(PLAYWRIGHT_BROWSERS_PATH=/home/nic/.cache/ms-playwright npx playwright install chromium)",
-      "Bash(PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=1 npx playwright install chromium)"
+      "Bash(PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=1 npx playwright install chromium)",
+      "Bash(npx tsx *)",
+      "Bash(curl -s -o /dev/null -w \"HTTP Status: %{http_code}\\\\n\" http://localhost:3001/api/overview)",
+      "Bash(curl -s http://localhost:3001/api/overview)",
+      "Bash(curl -s -o /dev/null -w \"HTTP Status: %{http_code}\\\\n\" http://localhost:3001/api/resources)",
+      "Bash(kill %1)",
+      "Bash(pkill -f \"tsx.*src/index.ts\")",
+      "Bash(python3 -m json.tool)",
+      "Bash(curl -s http://localhost:3001/api/deployments)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3001/api/overview)",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3001/api/resources)"
     ]
   }
 }

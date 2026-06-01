@@ -7,6 +7,7 @@ import resourcesRouter from './routes/resources.js';
 
 const app = express();
 const PORT = 3001;
+const HOST = '0.0.0.0';
 
 app.use(cors());
 app.use(express.json());
@@ -20,8 +21,8 @@ app.use('/api/deployments', deploymentsRouter);
 app.use('/api/images', imagesRouter);
 app.use('/api/resources', resourcesRouter);
 
-app.listen(PORT, () => {
-  console.log(`BFF server running on http://localhost:${PORT}`);
+app.listen(PORT, HOST, () => {
+  console.log(`BFF server running on http://${HOST}:${PORT}`);
 });
 
 export default app;

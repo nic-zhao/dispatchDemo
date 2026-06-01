@@ -66,6 +66,7 @@ export function OverviewPage() {
               <thead>
                 <tr className="border-b text-left text-muted-foreground">
                   <th className="pb-2">名称</th>
+                  <th className="pb-2">类型</th>
                   <th className="pb-2">命名空间</th>
                   <th className="pb-2">镜像</th>
                   <th className="pb-2">状态</th>
@@ -80,6 +81,7 @@ export function OverviewPage() {
                     onClick={() => navigate(`/deployments/${d.name}?namespace=${d.namespace}`)}
                   >
                     <td className="py-2 font-medium">{d.name}</td>
+                    <td className="py-2 text-muted-foreground">{d.kind || 'Deployment'}</td>
                     <td className="py-2 text-muted-foreground">{d.namespace}</td>
                     <td className="py-2 text-muted-foreground">{d.image}</td>
                     <td className="py-2">
